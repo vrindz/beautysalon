@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{%block title %}Services {%endblock%}
+{% block content %}
+<h1 class="text-center">Our Services</h1>
+<br>
+{% for s in service %}
+
+<div class="mx-auto w-50 bg-secondary text-justify text-white p-3 my-4 border border-warning rounded">
+    <h1>{{s.serv_name}}</h1>
+     <h6>{{s.serv_desc}}</h6>
+    <div class="card text-center mx-3 my-5" style="width: 18rem; display:inline-block">
+    <img src="{{s.serv_image.url}}" alt="" width="100px" height="200px" class="card-img-top">
+
+
+</div>
+     </div>
+{% endfor %}
+{% endblock %}
+
+
