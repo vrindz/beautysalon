@@ -10,9 +10,10 @@ class Service(models.Model):
     def __str__(self):
         return self.serv_name
 class Booking(models.Model) :
-    p_name = models.CharField(max_length=255)
-    p_phone = models.CharField(max_length=255)
-    p_email = models.EmailField()
-    serv_name = models.ForeignKey(Service, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=255)
+    email = models.EmailField()
+    service_name = models.ForeignKey(Service, on_delete=models.CASCADE)
+    message = models.CharField(max_length=400)
     booking_date = models.DateField()
     booked_on = models.DateField(auto_now=True)

@@ -1,6 +1,5 @@
-from django.shortcuts import render,redirect
-from django.http import HttpResponse,HttpResponseRedirect
-from . import forms
+from django.shortcuts import render
+
 from .forms import BookingForm
 
 from .models import Service
